@@ -1,9 +1,10 @@
-<li [ngClass]="{'list-group-item': true,
+<li *ngIf="selectedPost" [ngClass]="{'list-group-item': true,
 'list-group-item-success': selectedPost.loveIts > 0,
 'list-group-item-danger': selectedPost.loveIts < 0}">
       <h1>{{selectedPost.title}}</h1>
       <p>{{selectedPost.createdAt | date : 'short'}}</p><br />
       {{selectedPost.content}}<br />
-      <button class="btn btn-success" (click)="addLike()">Love it</button>
-      <button class="btn btn-danger" (click)="addDislike()">Don't love it</button>
+      <button class="btn btn-success" (click)="onAddLike()">Love it</button>
+      <button class="btn btn-danger" (click)="onAddDislike()">Don't love it</button>
+      <button class="btn pull-right" (click)="onDeletePost()">Delete</button>
 </li>
