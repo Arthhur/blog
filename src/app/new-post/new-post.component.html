@@ -17,6 +17,6 @@
       <label for="createdAt">createdAt</label>
       <input type="text" id="createdAt" class="form-control" formControlName="createdAt" placeholder="MM/DD/YYYY">
     </div>
-    <button type="submit" class="btn btn-primary">Soumettre</button>
+    <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Soumettre</button>
   </form>
 </div>
